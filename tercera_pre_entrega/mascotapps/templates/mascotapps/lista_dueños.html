@@ -1,0 +1,17 @@
+{% extends 'mascotapps/index.html' %}
+
+{% load static %}
+
+{% block title %}
+    Lista de donantes
+{% endblock title %}
+
+{% block main %}
+
+{% for dato in datos %}
+    <p> {{dato.nombre}} {{dato.apellido}} es la/el dueña/o de {{dato.nombreMascota}}. </p>
+{% endfor %}
+<a class="btn btn-primary" href="{% url 'index' %}">Volver</a>
+<a class="btn btn-primary" href="{% url 'agregar-dueños' %}">Agregar dueño</a>
+
+{%endblock main%}

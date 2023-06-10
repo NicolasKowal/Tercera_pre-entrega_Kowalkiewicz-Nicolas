@@ -1,0 +1,17 @@
+{% extends 'mascotapps/index.html' %}
+
+{% load static %}
+
+{% block title %}
+    Agregar mascota
+{% endblock title %}
+
+{% block main %}
+    <form action="" method ="POST"> {% csrf_token %}
+        <table>
+            {{ miFormulario.as_table }}
+        <table>
+        <input type = "submit" value ="Enviar"> 
+    </form>
+
+{% endblock main %}
