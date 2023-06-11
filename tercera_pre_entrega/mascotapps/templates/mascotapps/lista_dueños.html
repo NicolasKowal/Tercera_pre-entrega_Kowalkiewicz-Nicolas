@@ -7,11 +7,16 @@
 {% endblock title %}
 
 {% block main %}
+<style>
+    body {
+        margin: 20px;
+    }
+</style>
 
 {% for dato in datos %}
     <p> {{dato.nombre}} {{dato.apellido}} es la/el dueña/o de {{dato.nombreMascota}}. </p>
 {% endfor %}
-<a class="btn btn-primary" href="{% url 'index' %}">Volver</a>
+<a class="btn btn-primary" href="{% url 'main' %}">Volver</a>
 <a class="btn btn-primary" href="{% url 'agregar-dueños' %}">Agregar dueño</a>
 
 {%endblock main%}

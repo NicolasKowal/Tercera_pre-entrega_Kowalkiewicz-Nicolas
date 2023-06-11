@@ -7,9 +7,14 @@
 {% endblock title %}
 
 {% block main %}
+<style>
+    body {
+        margin: 20px;
+    }
+</style>
 
 {% for dato in datos %}
     <p> {{dato.nombre}} es un/a {{dato.tipo}} y tiene {{dato.edad}} años!.</p>
 {% endfor %}
-<a class="btn btn-primary" href="{% url 'index' %}">Volver</a>
+<a class="btn btn-primary" href="{% url 'main' %}">Volver</a>
 {%endblock main%}

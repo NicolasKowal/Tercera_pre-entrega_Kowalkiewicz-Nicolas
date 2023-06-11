@@ -7,7 +7,13 @@
 {% endblock title %}
 
 {% block main %}
-    <p> </p>
+<style>
+    body {
+        margin: 20px;
+    }
+</style>
+
+    <p> {{mensaje}} </p>
     
     <form action="" method ="POST"> {% csrf_token %}
         <p> Nombre de mascota: <input type = "text" name="nombre">

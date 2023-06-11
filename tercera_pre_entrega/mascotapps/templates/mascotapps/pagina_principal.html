@@ -1,0 +1,71 @@
+{% extends 'mascotapps/index.html' %}
+
+{% load static %}
+
+{% block title %}
+    Pagina Principal
+{% endblock title %}
+
+{% block main %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 20px;
+    }
+
+    h1 {
+        color: #333;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    p {
+        color: #666;
+        line-height: 1.5;
+    }
+
+    strong {
+        font-weight: bold;
+    }
+
+    u {
+        text-decoration: underline;
+    }
+
+    a {
+        color: #ff6600;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 30px;
+    }
+</style>
+</head>
+<body>
+<h1>La importancia de cuidar a las mascotas</h1>
+<p>Es crucial entender lo lindo y significativo que es cuidar a nuestras queridas mascotas.</p>
+<p><strong>Las mascotas son parte de nuestras familias y merecen atención y cuidado adecuados.</strong></p>
+<p>El cuidado apropiado incluye una serie de aspectos esenciales:</p>
+<ul>
+<li><strong>Alimentación adecuada:</strong> Proporcionarles una dieta equilibrada y saludable les garantiza una vida más larga y feliz.</li>
+<li><strong>Atención veterinaria:</strong> Las visitas regulares al veterinario aseguran su bienestar y previenen enfermedades.</li>
+<li><strong>Ejercicio diario:</strong> Proporcionarles tiempo y espacio para jugar y ejercitarse les ayuda a mantenerse en forma y evitar problemas de salud.</li>
+<li><strong>Afecto y compañía:</strong> Las mascotas necesitan amor y atención. Brindarles cariño fortalece nuestro vínculo y contribuye a su felicidad.</li>
+</ul>
+<p>Recuerda siempre <u>adoptar, no comprar</u>. Hay muchas mascotas esperando un hogar amoroso en refugios y organizaciones de rescate.</p>
+<p><em>¡Cuidar a una mascota es una experiencia maravillosa y gratificante para toda la vida!</em></p>
+
+<p>Si quieres obtener más información sobre el cuidado de las mascotas, visita <a href="https://www.petalatino.com/">PETA</a>.</p>
+
+{% endblock main %}

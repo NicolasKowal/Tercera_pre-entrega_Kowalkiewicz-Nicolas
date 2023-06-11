@@ -25,5 +25,6 @@ urlpatterns = [
     path('Agregar_Mascotas/', views.agregar_mascotas, name = 'agregar'),
     path('Dueños/', views.mostrar_dueños, name= 'dueños'), 
     path('Dueños_add/', views.agregar_dueños, name= 'agregar-dueños'), 
+    path('Pagina_principal', views.main, name ='main')
     
 ]

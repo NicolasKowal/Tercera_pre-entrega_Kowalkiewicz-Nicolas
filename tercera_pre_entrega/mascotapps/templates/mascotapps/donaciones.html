@@ -7,6 +7,12 @@
 {% endblock title %}
 
 {% block main %}
+<style>
+    body {
+        margin: 20px;
+    }
+</style>
+
 <form action="" method ="POST"> {% csrf_token %}
     <table>
         {{ miFormulario.as_table }}

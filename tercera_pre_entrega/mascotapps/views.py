@@ -36,8 +36,9 @@ def buscar_mascotas(request):
             return render(request, 'mascotapps/buscardatos.html', {"buscardatos": buscardatos})
 
     else:
+        mensaje = "ASD"
         buscardatos = MascotasForm()
-        return render(request, 'mascotapps/buscardatos.html', {"buscardatos": buscardatos})
+        return render(request, 'mascotapps/buscardatos.html', {"buscardatos": buscardatos, "mensaje": mensaje})
 
 
 def agregar_mascotas(request):
@@ -49,7 +50,7 @@ def agregar_mascotas(request):
             informacion = miFormulario.cleaned_data
             formu = Mascotas(nombre = informacion["nombre"], tipo = informacion["tipo"], edad = informacion["edad"])
             formu.save()
-            return render(request, "mascotapps/index.html")
+            return render(request, "mascotapps/main.html")
     else:
         miFormulario = MascotasAdd()
 
@@ -74,3 +75,6 @@ def agregar_dueños(request):
 def mostrar_dueños(request):
     datos = Dueños.objects.all()
     return render(request, 'mascotapps/lista_dueños.html', {"datos" : datos})
+
+def main(request):
+    return render(request, 'mascotapps/pagina_principal.html')

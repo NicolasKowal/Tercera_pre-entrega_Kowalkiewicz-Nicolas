@@ -7,9 +7,15 @@
 {% endblock title %}
 
 {% block main %}
+<style>
+    body {
+        margin: 20px;
+    }
+</style>
+
 
 {% for dato in datos %}
     <p> {{dato.nombre}} hizo una donacion de ${{dato.cantidad}}.</p>
 {% endfor %}
-<a class="btn btn-primary" href="{% url 'index' %}">Volver</a>
+<a class="btn btn-primary" href="{% url 'main' %}">Volver</a>
 {%endblock main%}
