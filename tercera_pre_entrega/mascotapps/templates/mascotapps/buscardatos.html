@@ -7,10 +7,15 @@
 {% endblock title %}
 
 {% block main %}
+
 <style>
     body {
-        margin: 20px;
+            margin: 20px;
     }
+    td {
+            padding: 10px;
+            line-height: 1.5;
+        }
 </style>
 
     <p> {{mensaje}} </p>
@@ -19,5 +24,4 @@
         <p> Nombre de mascota: <input type = "text" name="nombre">
         <input type = "submit" value ="Enviar"> 
     </form>
-
 {% endblock main %}

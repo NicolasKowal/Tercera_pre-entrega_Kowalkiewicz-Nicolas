@@ -29,16 +29,15 @@ def buscar_mascotas(request):
             info = buscardatos.cleaned_data
             nombre = info['nombre']
             datos = Mascotas.objects.filter(nombre__icontains = nombre)
-            return render(request, 'mascotapps/lista.html', {"datos": datos})
-
-        else:
-            buscardatos = MascotasForm()
-            return render(request, 'mascotapps/buscardatos.html', {"buscardatos": buscardatos})
+            if datos:
+                return render(request, 'mascotapps/lista.html', {"datos": datos})
+            else:
+                mensaje = "No se encontraron mascotas con ese nombre"
+                return render(request, 'mascotapps/buscardatos.html', {"buscardatos": buscardatos, "mensaje": mensaje})
 
     else:
-        mensaje = "ASD"
         buscardatos = MascotasForm()
-        return render(request, 'mascotapps/buscardatos.html', {"buscardatos": buscardatos, "mensaje": mensaje})
+        return render(request, 'mascotapps/buscardatos.html', {"buscardatos": buscardatos})
 
 
 def agregar_mascotas(request):
